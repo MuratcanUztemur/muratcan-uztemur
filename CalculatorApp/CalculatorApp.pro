@@ -17,10 +17,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 # source files are added
 SOURCES += \
+    Calculator.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
+    Calculator.h \
     mainwindow.h
 
 FORMS += \
