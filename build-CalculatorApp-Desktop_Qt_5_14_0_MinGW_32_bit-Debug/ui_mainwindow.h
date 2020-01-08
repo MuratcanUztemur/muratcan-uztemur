@@ -42,6 +42,7 @@ public:
     QPushButton *equalButton;
     QPushButton *zeroButton;
     QPushButton *pointButton;
+    QLabel *historyLabel;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -61,7 +62,7 @@ public:
         clearButton->setFont(font);
         calcLabel = new QLabel(centralwidget);
         calcLabel->setObjectName(QString::fromUtf8("calcLabel"));
-        calcLabel->setGeometry(QRect(0, 0, 241, 81));
+        calcLabel->setGeometry(QRect(0, 30, 241, 51));
         calcLabel->setStyleSheet(QString::fromUtf8("background-color: rgb(112, 112, 112);\n"
 "background-color: rgb(234, 234, 234);"));
         minusButton = new QPushButton(centralwidget);
@@ -152,6 +153,11 @@ public:
         pointButton->setObjectName(QString::fromUtf8("pointButton"));
         pointButton->setGeometry(QRect(120, 330, 61, 61));
         pointButton->setFont(font);
+        historyLabel = new QLabel(centralwidget);
+        historyLabel->setObjectName(QString::fromUtf8("historyLabel"));
+        historyLabel->setGeometry(QRect(0, 0, 241, 31));
+        historyLabel->setStyleSheet(QString::fromUtf8("background-color: rgb(112, 112, 112);\n"
+"background-color: rgb(234, 234, 234);"));
         MainWindow->setCentralWidget(centralwidget);
 
         retranslateUi(MainWindow);
@@ -166,7 +172,7 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Calculator", nullptr));
         clearButton->setText(QCoreApplication::translate("MainWindow", "C", nullptr));
-        calcLabel->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p align=\"right\"><span style=\" font-size:26pt;\">0000</span></p></body></html>", nullptr));
+        calcLabel->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p align=\"right\"><br/></p></body></html>", nullptr));
         minusButton->setText(QCoreApplication::translate("MainWindow", "+/-", nullptr));
         modButton->setText(QCoreApplication::translate("MainWindow", "%", nullptr));
         sumButton->setText(QCoreApplication::translate("MainWindow", "+", nullptr));
@@ -185,6 +191,7 @@ public:
         equalButton->setText(QCoreApplication::translate("MainWindow", "=", nullptr));
         zeroButton->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
         pointButton->setText(QCoreApplication::translate("MainWindow", ".", nullptr));
+        historyLabel->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p align=\"right\"><br/></p></body></html>", nullptr));
     } // retranslateUi
 
 };
