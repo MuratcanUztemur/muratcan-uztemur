@@ -14,6 +14,7 @@ class Calculator : public QMainWindow
 public:
     Calculator(QWidget *parent = nullptr);
     ~Calculator();
+    // comments are added
 
 private:
     Ui::Calculator *ui;
